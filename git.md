@@ -4,9 +4,19 @@
 
 #### git이란?
 
-분산 버전 관리 시스템이다.
+- 분산 버전 관리 시스템이다.
 
-​	- 버전 : 컴퓨터 소프트웨어의 특정 상태
+​		- 버전 : 컴퓨터 소프트웨어의 특정 상태
+
+- Git 파일 관리
+
+​		- modified : 파일이 수정된 상태(add 명령어를 통해 Staging Area로 이동)
+
+​		- staged : 수정한 파일을 곧 커밋할 것이라고 표시한 상태 (commit 명령어로 저장소)
+
+​		- committed : 커밋이 된 상태
+
+​		- untracked : 버전으로 관리된 적 없는 파일
 
 
 
@@ -40,26 +50,6 @@
 
 
 
-​	- `git init` : 로컬 저장소 생성
-
-​	- `git add <파일명>` : 특정 파일/폴더의 변경 사항 추가
-
-​	- `git commit -m 'message'` : 버전(커밋) 기록
-
-​	- `git log` : 버전(커밋) 기록 확인
-
-​	- `git log -p` : 자세한 기록 확인
-
-​	- `git log -1` : 가장 최근 기록된 커밋 확인
-
-​	- `git log --oneline` : 한 줄로 기록 확인
-
-​	- `git status` : 상태 확인(1통, 2통, 3통)
-
-
-
-
-
 ---
 
 
@@ -73,6 +63,17 @@ $ git config --global user.email '이메일'
 
 - Commit을 작성한 사람(author)으로 저장됨.
 - 이름과 이메일 정보는 Github에서 사용하고 있는 것과 동일하게 설정
+
+
+
+#### 설정 확인
+
+```
+$ git config -l
+$ git config --global -l
+$ git config user.name
+$ git config user.email
+```
 
 
 
@@ -103,7 +104,7 @@ $ git init
 2. add
 
 ```
-$ git add .
+$ git add . #현재 폴더에 대한 모든 파일의 변경사항을 add
 $ git add <파일명>
 ```
 
@@ -141,6 +142,103 @@ $ git commit -m 'message'
 
 
 
-4. 
+4. log
 
-w
+```
+$ git log
+$ git log -p
+$ git log -1
+$ git log --oneline
+$ git log -1 --oneline
+```
+
+- 현재 저장소에 기록된 버전(커밋)을 조회
+
+  - `git log` : 버전(커밋) 기록 확인
+
+  - `git log -p` : 자세한 기록 확인
+
+  ![스크린샷 2022-07-06 22.27.25](git.assets/스크린샷 2022-07-06 22.27.25.png)
+
+  
+
+  - `git log -1` : 가장 최근 기록된 커밋 확인
+
+  ![스크린샷 2022-07-06 22.28.07](git.assets/스크린샷 2022-07-06 22.28.07.png)
+
+  
+
+  - `git log --oneline` : 한 줄로 기록 확인
+
+  ![스크린샷 2022-07-06 22.28.42](git.assets/스크린샷 2022-07-06 22.28.42.png)
+
+
+
+5. status
+
+```
+$ git stauts
+```
+
+- Git 저장소에 있는 파일의 상태를 확인하기 위해 사용
+- 파일의 상태를 알 수 있음
+
+![스크린샷 2022-07-06 22.30.00](git.assets/스크린샷 2022-07-06 22.30.00.png)
+
+
+
+---
+
+
+
+#### Git 원격저장소 연결하기
+
+1. 경로 설정
+
+```
+$ git remote add origin http://github.com/'Github Username'/'저장소'.git
+```
+
+- 원격 저장소 정보를 로컬 저장소에 추가
+- 로컬 저장소에는 한 번만 설정
+
+
+
+* 만약 저장소 주소를 변경하고 싶다면 `remove` 로 기존 연결을 끊고 새로 추가하기
+
+```
+$ git remote remove origin
+$ git remote add origin '변경할 저장소 주소'
+```
+
+- `git remote -v` 로 주소가 잘 변경 되었는지 확인
+
+![스크린샷 2022-07-06 22.47.10](git.assets/스크린샷 2022-07-06 22.47.10.png)
+
+
+
+참고 https://cheershennah.tistory.com/217
+
+
+
+2. push
+
+```
+$ git push origin master
+```
+
+- 지금까지의 버전(커밋)을 push 하는 것
+- Working directory, Staging area의 변경 사항은 push 되지 않음
+- `git status` 와 `git log` 를 통해 확인하는 습관을 가지는게 좋음
+
+
+
+---
+
+
+
+#### 참고
+
+- [git 저장소 주소 변경하기](https://cheershennah.tistory.com/217)
+- [git 완전 기초 사용 방법](https://chancoding.tistory.com/76)
+

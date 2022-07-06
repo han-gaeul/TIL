@@ -1,4 +1,4 @@
-# MarkDown
+# MarkDown 문법
 
 
 
@@ -42,6 +42,7 @@
 - `*`, `_`  : *이탤릭체*, _이탤릭체2_
 - `**`, `__`  : **굵게**, __굵게2__
 - `~~`  : ~~취소선~~
+- `***` : ***굵게이탤릭체***
 
 
 
@@ -51,22 +52,22 @@
 
 ### 목록
 
-**순서가 필요한 목록**  : `1.`  사용 
+**순서가 있는 목록(ol)**  : `1.`  사용 
 
-**순서가 필요 없는 목록**  : -, *, +
+**순서가 없는 목록(ul)**  : -, *, +
 
 
 
-> 1. 순서가 필요한 목록
-> 2. 순서가 필요한 목록2
->    1. 순서가 필요한 목록2-1
-> 3. 순서가 필요한 목록3
+> 1. 순서가 있는 목록
+> 2. 순서가 있는 목록2
+>    1. 순서가 있는 목록2-1
+> 3. 순서가 있는 목록3
 >
 > 
 >
-> - 순서가 필요 없는 목록
->   - 순서가 필요 없는 목록-1
-> - 순서가 필요 없는 목록2
+> - 순서가 없는 목록
+>   - 순서가 없는 목록-1
+> - 순서가 없는 목록2
 
 
 
@@ -80,7 +81,7 @@
 
 ### 링크
 
-​	- `[ ]( )` : 대괄호 안에 내용을 메모하고, 소괄호 안에 url 작성
+​	- `[ ]( )` : 대괄호 안에 문자열을 작성하고, 소괄호 안에 url 작성
 
 - [github](https://github.com/)
 - [google](https://www.google.co.kr/)
@@ -128,17 +129,17 @@ url : <https://www.google.co.kr/>
 
 
 
-### 블록 코드
+### 코드 블록
 
-` ``` ` : `Code` 를 3개 작성 후 코드 종류(Python, JavaScript, HTML 등)를 선택
+- 펜스 코드 블록(Fenced Code block)
+
+` ``` ` : `backtick` 기호 3개 작성 후 코드 언어`(Python, JavaScript, HTML 등)를 선택
 
 
 
 ```python
 print("Hello World")
 ```
-
-
 
 ```html
 <head>
@@ -149,21 +150,48 @@ print("Hello World")
 </body>
 ```
 
+````
+```
+{
+  "firstName": "gaeul",
+  "lastName": "Han",
+  "age": 25
+}
+```
+````
+
+
+
+- 인라인 코드 블록(Inline Code block)
+
+` ` : `backtick` 기호 1개를 활용
+
 
 
 ---
 
 
 
-### 표
+### 표(Table)
 
-|      |      |      |
-| ---- | ---- | ---- |
-|      |      |      |
-|      |      |      |
-|      |      |      |
+| 제목 | 제목2 | 제목3 |
+| ---- | ----- | ----- |
+| 내용 | 내용2 | 내용3 |
+| 내용 | 내용2 | 내용3 |
+| 내용 | 내용2 | 내용3 |
 
-Mac 단축키 : option + command + T
+
+
+```
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+```
+
+
+
+- Mac 단축키 : option + command + T
 
 
 
@@ -171,7 +199,7 @@ Mac 단축키 : option + command + T
 
 
 
-### 인용문
+### 인용문(Blockquotes)
 
 `>`  를 사용
 
@@ -213,4 +241,5 @@ Mac 단축키 : option + command + T
 
 - [마크다운 사용법-GitHub](https://gist.github.com/ihoneymon/652be052a0727ad59601#1-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4%EC%97%90-%EA%B4%80%ED%95%98%EC%97%AC)
 - [마크다운 사용법-Velog](https://velog.io/@bboding/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4MarkDown-%EC%82%AC%EC%9A%A9%EB%B2%95)
+- [마크다운 치트 시트](https://www.markdownguide.org/cheat-sheet/)
 
