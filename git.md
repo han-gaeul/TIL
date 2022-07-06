@@ -24,6 +24,8 @@
 
 ​	- `ls` (list) : 목록
 
+​	- `ls -al` : 폴더 안에 있는 파일, 폴더 목록
+
 ​	- `mkdir` (make directory) : 디렉토리 생성
 
 ​	- `touch` : 파일의 날짜와 시간 수정(0바이트 빈 파일 생성)
@@ -31,6 +33,8 @@
 ​	- `rm` : 파일 삭제
 
 ​	- `rm -r` : 폴더 삭제
+
+​	- `rm -fr .git` : git 삭제
 
 ​	- 단축키 `control + l` 또는 명령어 `clear` : 터미널 내용 지우기
 
@@ -44,7 +48,15 @@
 
 ​	- `git log` : 버전(커밋) 기록 확인
 
+​	- `git log -p` : 자세한 기록 확인
+
+​	- `git log -1` : 가장 최근 기록된 커밋 확인
+
+​	- `git log --oneline` : 한 줄로 기록 확인
+
 ​	- `git status` : 상태 확인(1통, 2통, 3통)
+
+
 
 
 
@@ -72,7 +84,7 @@ $ git config --global user.email '이메일'
 
 #### Git 사용
 
-1. 저장소 생성
+1. git init(저장소 생성)
 
 ```
 $ git init
@@ -82,20 +94,52 @@ $ git init
 - 터미널에서는 `(master)` 라는 표기가 생김
 - git 설정 또는 명령어를 작성할 때 현재 경로를 꼭 확인해야 함
 
-
-
-![image-20220706173409687](git.assets/image-20220706173409687.png)
-
-
-
 - `Desktop` 에 저장소 만드는 건 추천하지 않음
+
+<img src="git.assets/스크린샷 2022-07-06 17.54.12.png" alt="스크린샷 2022-07-06 17.54.12" style="zoom: 67%;" />
 
 
 
 2. add
 
+```
+$ git add .
+$ git add <파일명>
+```
+
 - 작업 위치(Working Directory) 안에 있는 파일을 Staging Area로 옮기기 위해 사용
 
   Staging Area는 commit을 진행하기 전에 임시 저장된 상태
 
-- 
+- `1.txt` 라는 파일을 생성 후 `git status` 명령어를 입력하면 '변경 사항을 추가하지 않았음 (git add를 사용)' 하라는 문구가 나옴
+
+![스크린샷 2022-07-06 18.05.54](git.assets/스크린샷 2022-07-06 18.05.54.png)
+
+- `git add 1.txt` 입력 후 다시 `git status` 명령어를 입력하면 Staging Area에 추가 완료
+
+![스크린샷 2022-07-06 18.08.36](git.assets/스크린샷 2022-07-06 18.08.36.png)
+
+
+
+3. commit
+
+```
+$ git commit -m 'message'
+```
+
+- 버전(커밋) 기록을 할 때 알아보기 쉬운 내용으로 작성
+
+- 영어로 작성하는 것이 보편적
+
+  - 참고자료 
+
+    [좋은 커밋 메시지를 작성하기 위한 7가지 약속](https://meetup.toast.com/posts/106) / [좋은 커밋 메시지를 위한 영어 사전](https://blog.ull.im/engineering/2019/03/10/logs-on-git.html)
+
+- 커밋 기록을 확인하기 위해서 `git log` 명령어 사용
+
+![커밋기록](git.assets/스크린샷 2022-07-06 18.20.04.png)
+
+
+
+4. 
+
