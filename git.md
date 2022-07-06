@@ -97,7 +97,7 @@ $ git init
 
 - `Desktop` 에 저장소 만드는 건 추천하지 않음
 
-![master](./git.assets/스크린샷 2022-07-06 17.54.12.png)
+![master](file:///Users/goobano/Desktop/TIL/git.assets/image-20220706173409687.png)
 
 
 
@@ -114,7 +114,7 @@ $ git add <파일명>
 
 - `1.txt` 라는 파일을 생성 후 `git status` 명령어를 입력하면 '변경 사항을 추가하지 않았음 (git add를 사용)' 하라는 문구가 나옴
 
-![스크린샷 2022-07-06 18.05.54](git.assets/스크린샷 2022-07-06 18.05.54.png)
+![스크린샷 2022-07-06 18.05.54](file:///Users/goobano/Desktop/TIL/git.assets/스크린샷%202022-07-06%2018.05.54.png)
 
 - `git add 1.txt` 입력 후 다시 `git status` 명령어를 입력하면 Staging Area에 추가 완료
 
@@ -214,10 +214,6 @@ $ git remote add origin '변경할 저장소 주소'
 - `git remote -v` 로 주소가 잘 변경 되었는지 확인
 
 ![스크린샷 2022-07-06 22.47.10](git.assets/스크린샷 2022-07-06 22.47.10.png)
-
-
-
-참고 https://cheershennah.tistory.com/217
 
 
 

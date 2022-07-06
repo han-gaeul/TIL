@@ -117,11 +117,7 @@ url : <https://www.google.co.kr/>
 
 ![Python](https://www.python.org/static/img/python-logo@2x.png)
 
-![다운로드](markdown.assets/다운로드.jpeg)
-
-
-
-또는 다운받은 이미지를 바로 드래그해서 넣어도 된다.
+![다운로드](markdown.assets/다운로드-7116684.jpeg)
 
 
 
