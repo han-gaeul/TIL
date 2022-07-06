@@ -97,7 +97,7 @@ $ git init
 
 - `Desktop` 에 저장소 만드는 건 추천하지 않음
 
-![master](file:///Users/goobano/Desktop/TIL/git.assets/image-20220706173409687.png)
+![master](git.assets/image-20220706173409687.png)
 
 
 
