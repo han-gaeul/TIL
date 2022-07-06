@@ -1,5 +1,3 @@
-# 마크다운
-
-- [마크다운 기본 예시](./마크다운.md)
-- [이미지 폴더](./images/)
-- 
+# TIL
+- [MarkDown](https://github.com/han-gaeul/TIL/blob/master/markdown/markdown.md)
+- [Git](https://github.com/han-gaeul/TIL/blob/master/markdown/git.md)
