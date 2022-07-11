@@ -285,6 +285,5 @@ $ git stauts
 
 #### 참고
 
-- [git 저장소 주소 변경하기](https://cheershennah.tistory.com/217)
-- [git 완전 기초 사용 방법](https://chancoding.tistory.com/76)
+​	i. [git 완전 기초 사용 방법](https://chancoding.tistory.com/76)
 
