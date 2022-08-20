@@ -1,4 +1,6 @@
-# 함수(function)
+#### ```함수(function)```
+
+--------------------
 
 - 함수란?
 
@@ -48,11 +50,7 @@
 
 
 
-
-
-
-
-## 함수의 기초
+##### 함수의 기초
 
 - 선언과 호출
 
@@ -101,11 +99,7 @@
 
 
 
-
-
-
-
-## 함수의 결과값(output)
+##### 함수의 결과값(output)
 
 - 반드시 값을 하나만 return 한다.
   - 명시적인 return이 없는 경우에도 None을 반황
@@ -138,14 +132,10 @@ def minus_and_product(x, y):
 
 
 
+##### 함수의 입력(Input)
 
-
-
-
-## 함수의 입력(Input)
-
-- Parameter : 함수를 실행할 때 함수 내부에서 사용되는 식별자
-- Argument : 함수를 호출할 때 넣어주는 값
+- `Parameter` : 함수를 실행할 때 함수 내부에서 사용되는 식별자
+- `Argument` : 함수를 호출할 때 넣어주는 값
 
 ```python
 def function(ham): # parameter : ham
@@ -161,7 +151,7 @@ function('spam') # Argument
   - Argument 소괄호 안에 할당 func_name(argument)
 
     - 필수 Argument : 반드시 전달되어야 하는 Argument
-    - 선택 Argument : 값을 전달하지 않아도 되는 
+    - 선택 Argument : 값을 전달하지 않아도 되는 경우 기본값 전달
 
   - positional Argument*(기본)*
 
@@ -235,11 +225,7 @@ function('spam') # Argument
 
     
 
-
-
-
-
-## 함수의 범위(Scope)
+##### 함수의 범위(Scope)
 
 - 함수는 코드 내부에 local scope를 생성하며 그 외의 공간인 global scope로 구분
   - scope
@@ -312,11 +298,7 @@ function('spam') # Argument
 
   
 
-
-
-
-
-## 함수 응용
+##### 함수 응용
 
 - map(function, iterable)
 
@@ -344,5 +326,3 @@ function('spam') # Argument
   # 3 5
   # <class 'int'> <class 'int'>
   ```
-
-  
