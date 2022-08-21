@@ -1,4 +1,4 @@
-#### `클래스`
+### `클래스`
 
 ---------------
 
@@ -63,7 +63,9 @@
   - `@staticmethod` 데코레이터를 사용하여 정의
   - 호출 시, **어떠한 인자도 전달되지 않음** (클래스 정보에 접근/수정 불가)
 
-#### 📝 클래스 정리
+
+
+##### 📝 클래스 정리
 
 - 클래스 구현
   - 클래스 정의
@@ -74,7 +76,7 @@
 
 
 
-#### 📝 메소드 정리
+##### 📝 메소드 정리
 
 - 인스턴스 메소드
 
@@ -236,5 +238,157 @@ class Person:
   > 반갑습니다. 김학생입니다.
 
 - 상속 관련 함수와 메소드
+
   - Isinstance *(object, classinfo)*
+
     - classinfo의 instance거나 subclass인 경우 True
+    - classinfo는 클래스 객체의 튜플일 수 있으며 classinfo의 모든 항목을 검사
+
+    ```python
+    issubclass(bool, int)
+    ```
+
+    >True
+
+    ```python
+    issubclass(float, int)
+    ```
+
+    > False
+
+    ```python
+    issubclass(Professor, Person)
+    ```
+
+    > True
+
+    ```python
+    issubclass(professor, (Person, Student))
+    ```
+
+    > True
+
+  - super()
+
+    - 자식 클래스에서 부모 클래스를 사용하고 싶은 경우
+
+    ```python
+    class Person:
+      def __init__(self, name, age, number, email):
+        self.name = name
+        self.age = age
+        self.number = number
+        self.email = email
+        
+    class Student(Person):
+      def __init__(self, name, age, number, email, student_id):
+        self.name = name
+        self.age = age
+        self.number = number
+        self.email = email
+        self.student_id = student_id
+    ```
+
+    ```python
+    class Person:
+      def __init__(self, name, age, number, email):
+        self.name = name
+        self.age = age
+        self.number = number
+        self.email = email
+        
+    class Student(Person):
+      def __init__(self, name, age, number, email, student_id):
+        # Person 클래스
+        super().__init__(name, age, number, email)
+        self.student_id = student_id
+    ```
+
+
+
+##### 📝 상속 정리
+
+- 파이썬의 모든 클래스는 object로부터 상속 됨
+- 부모 클래스의 모든 요소(속성, 메소드)가 상속 됨
+- super()를 통해 부모 클래스의 요소를 호출할 수 있음
+- 메소드 오버라이딩을 통해 자식 클래스에서 재정의 가능함
+- 상속 관계에서의 이름 공간은 인스턴스, 자식 클래스, 부모 클래스 순으로 탐색
+- 다중 상속
+  - 두 개 이상의 클래스를 상속 받는 경우
+  - 상속 받은 모든 클래스의 요소를 활용 가능함
+  - 중복된 속성이나 메서드가 있는 경우 상속 순서에 의해 결정 됨
+
+
+
+##### `다형성(Polymorphism)`
+
+- 다형성이란?
+
+  - 여러 모양을 뜻하는 그리스어
+
+  - 동일한 메소드가 클래스에 따라 다르게 행동할 수 있음을 의미
+
+  - 즉, 서로 다른 클래스에 속해있는 객체들이 동일한 메시지에 대한 다른 방식으로 응답 될 수 있음
+
+- 메소드 오버라이딩
+
+  - 상속 받은 메소드를 재정의
+
+  - 클래스 상속 시, 부모 클래스에서 정의한 메소드를 자식 클래스에서 변경
+
+  - 부모 클래스의 메소드 이름과 기본 기능은 그대로 사용하지만 특정 기능을 바꾸고 싶을 때 사용
+
+![method](Python_Class.assets/method.png)
+
+```python
+class Person:
+  def __init__(self, name):
+    self.name = name
+   
+  def talk(self):
+    print(f'반갑습니다. {self.name}입니다.')
+    
+# 자식 클래스 - Professor
+class Professor(Person):
+  def talk(self):
+    print(f'{self.name}일세.')
+    
+# 자식 클래스 - Student
+calss Student(Person):
+  def talk(self):
+    seper().talk()
+    print(f'저는 학생입니다.')
+```
+
+```python
+p1 = Professor('김교수')
+p1.talk()
+```
+
+> 김교수일세.
+
+```python
+s1 = Student('이학생')
+s1.talk()
+```
+
+> 반갑습니다. 이학생입니다.
+>
+> 저는 학생입니다.
+
+
+
+##### `캡슐화`
+
+- 객체의 일부 구현 내용에 대해 외부로부터의 직접적인 액세스를 차단
+- 파이썬에서 기능상으로 존재하지 않지만 관용적으로 사용되는 표현이 있음
+- 접근 제어자 종류
+  - Public Access Modifier
+    - 언더바 없이 시작하는 메소드나 속성
+    - 어디서나 호출이 가능, 하위 클래스 override 허용
+  - Protected Access Modifier
+    - **언더바 1개**로 시작하는 메소드나 속성
+    - 암묵적 규칙에 의해 부모 클래스 내부와 자식 클래스에서만 호출 가능
+  - Private Access Modifier
+    - **언더바 2개**로 시작하는 메소드나 속성
+    - 본 클래스 내부에서만 사용이 가능
