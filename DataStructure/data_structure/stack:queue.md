@@ -50,7 +50,7 @@ Data Structure 데이터 구조
 
   <span style='color:#2D3748; background-color:#fff5b1'>리스트(List)</span>로 스택을 간편하게 사용할 수 있다.
 
-<img src="stack:queue.assets/IMG_188B665035A7-1.jpeg" alt="IMG_188B665035A7-1" style="zoom:50%;" />
+<img src="stack:queue.assets/IMG188B665035A7.jpeg" alt="IMG188B665035A7" style="zoom:50%;" />
 
 
 
@@ -64,7 +64,7 @@ Data Structure 데이터 구조
 
 큐 자료구조도 <span style='color:#2D3748; background-color:#fff5b1'>리스트(List)</span>로 간편하게 사용할 수 있다.
 
-<img src="stack:queue.assets/IMG_CF65A77514AA-1.jpeg" alt="IMG_CF65A77514AA-1" style="zoom:50%;" />
+<img src="stack:queue.assets/IMGCF65A77514AA1.jpeg" alt="IMGCF65A77514AA1" style="zoom:50%;" />
 
 
 
@@ -84,5 +84,4 @@ Data Structure 데이터 구조
 
 따라서 데이터의 삽입, 추출이 많은 경우 시간을 크게 <span style='color:#2D3748; background-color:#fff5b1'>단축</span> 시킬 수 있다.
 
-<img src="stack:queue.assets/IMG_F1B72ABFFB8D-1.jpeg" alt="IMG_F1B72ABFFB8D-1" style="zoom:50%;" />
-
+<img src="stack:queue.assets/IMGF1B72ABFFB8D1.jpeg" alt="IMGF1B72ABFFB8D1" style="zoom:50%;" />
