@@ -14,5 +14,5 @@
 
 [스택, 큐 (Stack, Queue)](https://github.com/han-gaeul/TIL/blob/master/DataStructure/data_structure/stack:queue.md)
 
-[힙 (Heap), 셋 (Set)]()
+[힙 (Heap), 셋 (Set)](https://github.com/han-gaeul/TIL/blob/master/DataStructure/data_structure/Heap:set.md)
 
