@@ -1,9 +1,18 @@
-# TIL
+### 📖 TIL
 
-- [MarkDown](https://github.com/han-gaeul/TIL/blob/master/markdown/markdown.md)
-- [Git](https://github.com/han-gaeul/TIL/blob/master/Git/git.md)
+***
 
-- [Github](https://github.com/han-gaeul/TIL/blob/master/Git/Github.md)
+[MarkDown](https://github.com/han-gaeul/TIL/tree/master/markdown)
 
-- [Branch](https://github.com/han-gaeul/TIL/blob/master/Git/Branch.md)
+[Git](https://github.com/han-gaeul/TIL/tree/master/Git)
+
+[Python](https://github.com/han-gaeul/TIL/tree/master/Python)
+
+[Data Structure](https://github.com/han-gaeul/TIL/tree/master/DataStructure)
+
+[Algorithm](https://github.com/han-gaeul/TIL/tree/master/Algorithm)
+
+[Database](https://github.com/han-gaeul/TIL/tree/master/Database)
+
+[WEB](https://github.com/han-gaeul/TIL/tree/master/WEB)
 
