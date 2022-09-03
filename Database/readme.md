@@ -6,7 +6,7 @@
 
 [Database 기초 - 2](https://github.com/han-gaeul/TIL/blob/master/Database/database/database2.md)
 
-[Datbase 기초 - 3](https://github.com/han-gaeul/TIL/blob/master/Database/database/database3.md)
+[Database 기초 - 3](https://github.com/han-gaeul/TIL/blob/master/Database/database/database3.md)
 
 [Case](https://github.com/han-gaeul/TIL/blob/master/Database/database/case.md)
 
