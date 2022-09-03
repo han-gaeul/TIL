@@ -47,7 +47,7 @@
 
 - 요소(enement)
 
-  - <span style='background-color: #fff561'><h1></span>*(여는/시작)태그* contents <span style='background-color: #fff561'></h1></span>*(닫는/종료)태그*
+  - <span style='background-color: #fff561'>'<h1>'</span>*(여는/시작)태그* contents <span style='background-color: #fff561'>'</h1>'</span>*(닫는/종료)태그*
     - HTML의 요소는 태그와 내용(contents)로 구성
     - 태그로 내용을 감싼느 것으로 그 정보의 성격과 의미를 정의
     - 내용이 없는 태그들도 존재(닫는 태그가 없음)
