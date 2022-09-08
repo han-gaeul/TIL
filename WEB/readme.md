@@ -15,5 +15,4 @@
   - [CSS Layout](https://github.com/han-gaeul/TIL/blob/master/WEB/html:css/css_layout.md)
 - [Bootstrap](https://github.com/han-gaeul/TIL/blob/master/WEB/html:css/bootstrap.md)
   - [Components](https://github.com/han-gaeul/TIL/blob/master/WEB/html:css/boorstrap_components.md)
-
-
+  - [Grid System](https://github.com/han-gaeul/TIL/blob/master/WEB/html:css/bootstrap_gridsystem.md)
