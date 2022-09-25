@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Change My color</h2>
+    <label for="changeColorInput">원하는 색상을 영어로 입력하세요.</label>
+    <input id="changeColorInput">
+    <hr>
+
+    <script>
+        const colorInput = document.querySelector('#changeColorInput')
+
+        const changeColor = function(evnet) {
+            const h2Tag = document.querySelector('h2')
+            h2Tag.style.color = evnet.target.value
+        }
+
+        colorInput.addEventListener('input', changeColor)
+    </script>
+</body>
+</html>

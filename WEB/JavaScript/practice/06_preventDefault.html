@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body {
+            height: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <a href="https://google.com" target="_blank" id="myLink">GoToGoogle</a>
+    </div>
+
+    <script>
+        const aTag = document.querySelector('#myLink')
+
+        aTag.addEventListener('click', function() {
+            console.log(event)
+            event.preventDefault()
+        })
+
+        document.addEventListener('scroll', function(event) {
+            console.log(event)
+            event.preventDefault()
+        })
+    </script>
+</body>
+</html>
