@@ -11,4 +11,4 @@ def solution(n):
 # float 객체가 정수라면 True
 # 그렇지 않으면 False 반환
 # 예를 들어 1.5.is_integer()는 False
-# 1.0.is_integet()는 True
+# 1.0.is_integetr()는 True
