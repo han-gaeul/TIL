@@ -10,7 +10,7 @@ def solution(polynomial):
     polynomial = polynomial.split(" + ")
     # 분리한 배열을 순회하면서
     for i in polynomial:
-        # 해당 값에 x가 포함 되어 있늕 판별
+        # 해당 값에 x가 포함 되어 있는지 판별
         if 'x' not in i:
             # x가 포함 되어 있지 않다면 num 변수의 값을 증가
             num += int(i)
