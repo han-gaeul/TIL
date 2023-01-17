@@ -12,3 +12,23 @@ print(board.index(max(board)) + 1)
 # 백준에서 계속 틀렸다고 함
 # why?!??!????
 # 내일 다시 풀기
+
+
+board = [list(map(int, input().split())) for _ in range(9)]
+
+max_num, max_row, max_col = 0
+
+for row in range(9):
+    for col in range(9):
+        if max_num <= board[row][col]:
+            max_row = row + 1
+            max_col = col + 1
+            max_num = board[row][col]
+
+print(max_num)
+print(max_row, max_col)
+
+
+# for문을 최대한 반복하지 않으려고 위에 있는 코드로 작성했는데
+# 위는 오답, 밑은 정답 처리가 됐다... 뭘까..
+# max, index 같은 함수를 사용해서 그럴까..?
