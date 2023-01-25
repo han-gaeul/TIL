@@ -28,6 +28,9 @@
 # 배열 win_nums가 매개변수로 주어진다
 # 이때 당첨 가능한 최고 순위와 최저 순위를 차례대로 배열에 담아 return
 
+
+
+# 1.
 def solution(lottos, win_nums):
     # 당첨 가능한 최저 개수
     # lottos 리스트에 있는 번호 중
@@ -47,3 +50,15 @@ def solution(lottos, win_nums):
     # 당첨 순위
     rank = {6:1, 5:2, 4:3, 3:4, 2:5, 1:6, 0:6}
     return [rank[total], rank[count_win]]
+
+
+
+# 2.
+def solution(lottos, win_nums):
+    rank = [6, 6, 5, 4, 3, 2, 1]
+    count_0 = lottos.count(0)
+    answer = 0
+    for i in win_nums:
+        if i in lottos:
+            answer += 1
+    return rank[count_0 + answer], rank[answer]
