@@ -18,8 +18,11 @@ def solution(ingredient):
     stack = []
     for i in ingredient:
         stack.append(i)
+        # 리스트의 마지막 4개의 재료가 [1, 2, 3, 1]이면
         if stack[-4:] == [1, 2, 3, 1]:
+            # 햄버거의 개수 증가
             answer += 1
+            # 리스트의 마지막 4개 재료 제거
             for j in range(4):
                 stack.pop()
     return answer
