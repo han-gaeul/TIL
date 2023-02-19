@@ -9,8 +9,19 @@
 
 # 각 줄의 첫글자를 대문자로 바꾼뒤 출력
 
+
+# 1.
 N = int(input())
 for _ in range(N):
     sentence = input()
     sentence = sentence[0].upper() + sentence[1:]
     print(sentence)
+# 64ms
+
+
+# 2.
+N = int(input())
+for _ in range(N):
+    sentence = input()
+    print(sentence[0].upper() + sentence[1:])
+# 40ms
