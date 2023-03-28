@@ -1,0 +1,39 @@
+/* 다음은 어느 의류 쇼핑몰의 온라인 상품 판매 정보를 담은
+ONLINE_SALE 테이블과 오프라인 상품 판매 정보를 담은
+OFFLINE_SALE 테이블이다. ONLINE_SALE 테이블은 아래와
+같은 구조로 되어있으며 ONLINE_SLAE_ID, USER_ID,
+PRODUCT_ID, SALES_AMOUNT, SALES_DATE는 각각
+온라인 상품 판매 ID, 회원 ID, 상품 ID, 판매량, 판매일을 나타낸다
+Column name / Type / Nullable
+ONLINE_SALE_ID / INTEGER / FASLE
+USER_ID / INTEGER / FALSE
+PRODUCT_ID / INTEGER / FALSE
+SALES_AMOUNT / INTEGER / FALSE
+SALES_DATE / DATE / FALSE
+동일한 날짜, 회원 ID, 상품 ID 조합에 대해서는 하나의 판매 데이터만
+존재한다.
+OFFLINE_SALE 테이블은 아래와 같은 구조로 되어있으며
+OFFLINE_SALE_ID, PRODUCT_ID, SALES_AMOUNT,
+SALES_DATE는 각각 오프라인 상품 판매 ID, 상품 ID, 판매량,
+판매일을 나타낸다
+Column name / Type / Nullable
+OFFLINE_SALE_ID / INTEGER / FALSE
+PRODUCT_ID / INTEGER / FALSE
+SALES_AMOUNT / INTEGER / FALSE
+SALES_DATE / DATE / FALSE
+동일한 날짜, 상품 ID 조합에 대해서는 하나의 판매 데이터만
+존재한다.
+ONLINE_SALE 테이블과 OFFLINE_SALE 테이블에서 2022년
+3월의 오프라인/온라인 상품 판매 데이터의 판매 날짜, 상품 ID,
+유저 ID, 판매량을 출력하는 SQL문을 작성하라.
+OFFLINE_SALE 테이블의 판매 데이터의 USER_ID 값은 NULL로
+표시해라.  */
+
+SELECT DATE_FORMAT(SALES_DATE, '%Y-%m-%d') AS SALES_DATE, PRODUCT_ID, USER_ID, SALES_AMOUNT
+FROM ONLINE_SALE
+WHERE SALES_DATE LIKE '2022-03%'
+UNION ALL
+SELECT DATE_FORMAT(SALES_DATE, '%Y-%m-%d') AS SALES_DATE, PRODUCT_ID, NULL AS USER_ID, SALES_AMOUNT
+FROM OFFLINE_SALE
+WHERE SALES_DATE LIKE '2022-03%'
+ORDER BY SALES_DATE, PRODUCT_ID, USER_ID
