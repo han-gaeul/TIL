@@ -8,12 +8,10 @@
 - 다양한 데이터 타입을 제공하고 효율적인 파일 입출, 대용량의 복잡한 데이터를 저장하고 관리하기 위해 설계
 - 모든 object는 각자의 name이 있고, 계층적인 구조로 관리
 
-![img.jpg](C:\Users\tritech-fall\Desktop\img.jpg)
+![img.jpg](C:\Users\tritech-fall\Desktop\TIL\office\HDF\HDF5.assets\img.jpg)
 
 - 각 폴더는 Group, 파일의 역할을 하는 것은 Dataset
   - Dataset은 HDF5 파일에 담겨있는 데이터
-
-
 
 ## 특징
 
@@ -22,8 +20,6 @@
 - 복잡한 데이터 객체 및 매우 다양한 메타데이터를 표현할 수 있음
 - 데이터의 사이즈 및 개수에 제한이 없는 파일 형식
 - 다양한 언어로 된 라이브러리 지원(C/C++/Java/Python)
-
-
 
 ## 용어 정리
 
@@ -37,12 +33,6 @@
 - Property List : 라이브러리의 매개변수 제어 옵션 모음
 - Link : 객체가 연결 되는 방식
 
-
-
-
-
-
-
 # 📃사용 방법
 
 ## Install
@@ -52,8 +42,6 @@
 ```bash
 pip install h5py
 ```
-
-
 
 ## Import / Create
 
@@ -72,8 +60,6 @@ hdf5_file = h5py.File('test.hdf5', 'w')
   - `w-`, `x` : 파일 쓰기. 파일이 있는 경우 실패
   - `a` : 파일이 있는 경우 읽기/쓰기. 파일이 없다면 만들기(기본값)
 
-
-
 ## 데이터 모델
 
 ---
@@ -84,7 +70,7 @@ hdf5_file = h5py.File('test.hdf5', 'w')
 - 그룹에는 0개 이상의 개체가 포함되며 모든 개체는 적어도 하나의 그룹의 구성원
 - 항상 루트 그룹(`/`)이 존재하며, 파일 객체는 루트 그룹으로 취급할 수 있음
 
-![group1.png](C:\Users\tritech-fall\Desktop\group1.png)
+![group1.png](C:\Users\tritech-fall\Desktop\TIL\office\HDF\HDF5.assets\group1.png)
 
 - 예시
   
@@ -100,9 +86,9 @@ hdf5_file = h5py.File('test.hdf5', 'w')
   subgroup_d = top_group_C.create_group('subgroup_d/subgroup_f')
   ```
 
-![Screenshot 2023-08-03 at 14.33.01.JPG](C:\Users\tritech-fall\Desktop\Screenshot%202023-08-03%20at%2014.33.01.JPG.jpg)
+![Screenshot 2023-08-03 at 14.33.01.JPG](C:\Users\tritech-fall\Desktop\TIL\office\HDF\HDF5.assets\Screenshot%202023-08-03%20at%2014.33.01.JPG.jpg)
 
-![Screenshot 2023-08-03 at 14.33.52.JPG](C:\Users\tritech-fall\Desktop\Screenshot%202023-08-03%20at%2014.33.52.JPG.jpg)
+![Screenshot 2023-08-03 at 14.33.52.JPG](C:\Users\tritech-fall\Desktop\TIL\office\HDF\HDF5.assets\Screenshot%202023-08-03%20at%2014.33.52.JPG.jpg)
 
 - 그룹 조회
   
@@ -130,9 +116,7 @@ hdf5_file = h5py.File('test.hdf5', 'w')
   print(list(hdf5_file.items()) # [('a', <HDF5 group "/a" (2 members)>)]
   ```
 
-![Screenshot 2023-08-03 at 14.32.12.JPG](C:\Users\tritech-fall\Desktop\Screenshot%202023-08-03%20at%2014.32.12.JPG.jpg)
-
-
+![Screenshot 2023-08-03 at 14.32.12.JPG](C:\Users\tritech-fall\Desktop\TIL\office\HDF\HDF5.assets\Screenshot%202023-08-03%20at%2014.32.12.JPG.jpg)
 
 ### Dataset
 
@@ -177,9 +161,9 @@ dataset = group.create_dataset(name, shape=None, dtype=None, data=None, ...)
   # [b'0.4', b'0.3', b'1.4', b'5.8', b'3.2']
   ```
 
-![Screenshot 2023-08-03 at 14.25.44.JPG](C:\Users\tritech-fall\Desktop\Screenshot%202023-08-03%20at%2014.25.44.JPG.jpg)
+![Screenshot 2023-08-03 at 14.25.31.JPG](C:\Users\tritech-fall\Desktop\TIL\office\HDF\HDF5.assets\Screenshot%202023-08-03%20at%2014.25.44.JPG.jpg)
 
-![Screenshot 2023-08-03 at 14.25.31.JPG](C:\Users\tritech-fall\Desktop\Screenshot%202023-08-03%20at%2014.25.31.JPG.jpg)
+![Screenshot 2023-08-03 at 14.25.44.JPG](C:\Users\tritech-fall\Desktop\TIL\office\HDF\HDF5.assets\Screenshot%202023-08-03%20at%2014.25.31.JPG.jpg)
 
 - Datatype
   
@@ -206,8 +190,6 @@ dataset = group.create_dataset(name, shape=None, dtype=None, data=None, ...)
     | Compound                   | 일련의 데이터 유형에 대한 데이터 유형         |
     | User-defined               | 사용자 정의                        |
     | 예) 13비트 정수 또는 고정/가변 길이 문자열 |                               |
-
-
 
 ### Attribute
 
@@ -237,13 +219,9 @@ print('subgroup_b.attrs["message"] : ', subgroup_b.attrs['message'])
 # subgroup_b.attrs["message"] :  second_test
 ```
 
-![Screenshot 2023-08-08 at 14.22.53.JPG](C:\Users\tritech-fall\Desktop\Screenshot%202023-08-08%20at%2014.22.53.JPG.jpg)
+![Screenshot 2023-08-08 at 14.22.53.JPG](C:\Users\tritech-fall\Desktop\TIL\office\HDF\HDF5.assets\Screenshot%202023-08-08%20at%2014.22.53.JPG.jpg)
 
-![Screenshot 2023-08-08 at 15.21.34.JPG](C:\Users\tritech-fall\Desktop\Screenshot%202023-08-08%20at%2015.21.34.JPG.jpg)
-
-
-
-
+![Screenshot 2023-08-08 at 15.21.34.JPG](C:\Users\tritech-fall\Desktop\TIL\office\HDF\HDF5.assets\Screenshot%202023-08-08%20at%2015.21.34.JPG.jpg)
 
 ## Read
 
@@ -310,7 +288,7 @@ with h5py.File('20221025RMS.hdf5', 'r') as rms:
 # 1.9505000114440918
 ```
 
-![Screenshot 2023-08-03 at 08.55.38.JPG](C:\Users\tritech-fall\Desktop\Screenshot%202023-08-03%20at%2008.55.38.JPG.jpg)
+![Screenshot 2023-08-03 at 08.55.38.JPG](C:\Users\tritech-fall\Desktop\TIL\office\HDF\HDF5.assets\Screenshot%202023-08-03%20at%2008.55.38.JPG.jpg)
 
 - 파일 경로, 인덱스 입력하여 조회하기
 
@@ -352,12 +330,6 @@ with h5py.File(file_path, 'r') as hdf:
 # Dataset Name: PMS_ID_L01_TS02
 # Dataset Contents: 24.299999237060547
 ```
-
- 
-
-
-
-
 
 # 🔗참고 링크
 
