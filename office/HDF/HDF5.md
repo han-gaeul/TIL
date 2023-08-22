@@ -70,7 +70,7 @@ hdf5_file = h5py.File('test.hdf5', 'w')
 - 그룹에는 0개 이상의 개체가 포함되며 모든 개체는 적어도 하나의 그룹의 구성원
 - 항상 루트 그룹(`/`)이 존재하며, 파일 객체는 루트 그룹으로 취급할 수 있음
 
-![group1.png](C:\Users\tritech-fall\Desktop\TIL\office\HDF\HDF5.assets\group1.png)
+![group1.png](HDF5.assets\group1.png)
 
 - 예시
   
@@ -86,9 +86,9 @@ hdf5_file = h5py.File('test.hdf5', 'w')
   subgroup_d = top_group_C.create_group('subgroup_d/subgroup_f')
   ```
 
-![Screenshot 2023-08-03 at 14.33.01.JPG](C:\Users\tritech-fall\Desktop\TIL\office\HDF\HDF5.assets\Screenshot%202023-08-03%20at%2014.33.01.JPG.jpg)
+![Screenshot2023-08-03at14.33.01.JPG](C:/Users/tritech-fall/Desktop/TIL/office/HDF/HDF5.assets/Screenshot2023-08-03at14.33.01.JPG.jpg)
 
-![Screenshot 2023-08-03 at 14.33.52.JPG](C:\Users\tritech-fall\Desktop\TIL\office\HDF\HDF5.assets\Screenshot%202023-08-03%20at%2014.33.52.JPG.jpg)
+![Screenshot 2023-08-03 at 14.33.52.JPG](C:/Users/tritech-fall/Desktop/TIL/office/HDF/HDF5.assets/Screenshot2023-08-03at14.33.52.JPG.jpg)
 
 - 그룹 조회
   
@@ -116,7 +116,7 @@ hdf5_file = h5py.File('test.hdf5', 'w')
   print(list(hdf5_file.items()) # [('a', <HDF5 group "/a" (2 members)>)]
   ```
 
-![Screenshot 2023-08-03 at 14.32.12.JPG](C:\Users\tritech-fall\Desktop\TIL\office\HDF\HDF5.assets\Screenshot%202023-08-03%20at%2014.32.12.JPG.jpg)
+![Screenshot 2023-08-03 at 14.32.12.JPG](C:/Users/tritech-fall/Desktop/TIL/office/HDF/HDF5.assets/Screenshot2023-08-03at14.32.12.JPG.jpg)
 
 #### Dataset
 
@@ -161,9 +161,9 @@ dataset = group.create_dataset(name, shape=None, dtype=None, data=None, ...)
   # [b'0.4', b'0.3', b'1.4', b'5.8', b'3.2']
   ```
 
-![Screenshot 2023-08-03 at 14.25.31.JPG](C:\Users\tritech-fall\Desktop\TIL\office\HDF\HDF5.assets\Screenshot%202023-08-03%20at%2014.25.44.JPG.jpg)
+![Screenshot 2023-08-03 at 14.25.31.JPG](C:/Users/tritech-fall/Desktop/TIL/office/HDF/HDF5.assets/Screenshot2023-08-03at14.25.31.JPG.jpg)
 
-![Screenshot 2023-08-03 at 14.25.44.JPG](C:\Users\tritech-fall\Desktop\TIL\office\HDF\HDF5.assets\Screenshot%202023-08-03%20at%2014.25.31.JPG.jpg)
+![Screenshot 2023-08-03 at 14.25.44.JPG](C:/Users/tritech-fall/Desktop/TIL/office/HDF/HDF5.assets/Screenshot2023-08-03at14.25.44.JPG.jpg)
 
 - Datatype
   
@@ -219,9 +219,9 @@ print('subgroup_b.attrs["message"] : ', subgroup_b.attrs['message'])
 # subgroup_b.attrs["message"] :  second_test
 ```
 
-![Screenshot 2023-08-08 at 14.22.53.JPG](C:\Users\tritech-fall\Desktop\TIL\office\HDF\HDF5.assets\Screenshot%202023-08-08%20at%2014.22.53.JPG.jpg)
+![Screenshot 2023-08-08 at 14.22.53.JPG](C:/Users/tritech-fall/Desktop/TIL/office/HDF/HDF5.assets/Screenshot2023-08-08at14.22.53.JPG.jpg)
 
-![Screenshot 2023-08-08 at 15.21.34.JPG](C:\Users\tritech-fall\Desktop\TIL\office\HDF\HDF5.assets\Screenshot%202023-08-08%20at%2015.21.34.JPG.jpg)
+![Screenshot 2023-08-08 at 15.21.34.JPG](C:/Users/tritech-fall/Desktop/TIL/office/HDF/HDF5.assets/Screenshot2023-08-08at15.21.34.JPG.jpg)
 
 ### Read
 
@@ -288,7 +288,7 @@ with h5py.File('20221025RMS.hdf5', 'r') as rms:
 # 1.9505000114440918
 ```
 
-![Screenshot 2023-08-03 at 08.55.38.JPG](C:\Users\tritech-fall\Desktop\TIL\office\HDF\HDF5.assets\Screenshot%202023-08-03%20at%2008.55.38.JPG.jpg)
+![Screenshot 2023-08-03 at 08.55.38.JPG](C:/Users/tritech-fall/Desktop/TIL/office/HDF/HDF5.assets/Screenshot2023-08-03at08.55.38.JPG.jpg)
 
 - 파일 경로, 인덱스 입력하여 조회하기
 
