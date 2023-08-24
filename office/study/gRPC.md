@@ -18,7 +18,7 @@ gRPC 동작 방식에 대해 이해하고, 직접 구현해보는 것
 
 ------
 
-![Untitled](C:/Users/tritech-fall/Desktop/TIL/office/study/gRPC.assets/Untitled.png)
+![Untitled](gRPC.assets/Untitled.png)
 
 1. 프로토콜 버퍼(Protobuf) 정의
     1. 클라이언트와 서버 간의 통신에 사용할 데이터 형식을 정의하는 프로토콜 버퍼 파일 작성
@@ -73,9 +73,9 @@ $ python -m pip install grpcio-tools
 
 - 파일 경로
 
-    - `C:\\Users\\tritech-fall\\Desktop\\grpc_test\\proto`
+    - `C:\\Users\\사용자\\Desktop\\grpc_test\\proto`
 
-        ![Untitled](C:/Users/tritech-fall/Desktop/TIL/office/study/gRPC.assets/Untitled-1692580964188-2.png)
+        ![Untitled-1692580964188-2.png](gRPC.assets/Untitled-1692580964188-2.png)
 
 - 사칙연산의 Input, Output 결과값을 Server, Client에서 알 수 있는 Service와 Message 작성
 
@@ -138,7 +138,7 @@ message DivideReply {
 
 ```bash
 # 절대 경로
-$ python -m grpc_tools.protoc -I/C/Users/tritech-fall/Desktop/grpc_test/proto --python_out=. --grpc_python_out=./C/Users/tritech-fall/Desktop/grpc_test/proto/calc.proto
+$ python -m grpc_tools.protoc -I/C/Users/사용자/Desktop/grpc_test/proto --python_out=. --grpc_python_out=./C/Users/사용자/Desktop/grpc_test/proto/calc.proto
 
 # 상대 경로
 $ python -m grpc_tools.protoc -I./proto --python_out=. --grpc_python_out=. ./proto/calc.proto
@@ -154,17 +154,17 @@ $ python -m grpc_tools.protoc -I./proto --python_out=. --grpc_python_out=. ./pro
 
         1. https://github.com/protocolbuffers/protobuf/releases 해당 링크로 들어가 현재 환경에 맞는 protoc 다운로드
 
-        2. `C:\\Users\\tritech-fall\\Desktop\\grpc_test` 경로에 압축 해제
+        2. `C:\\Users\\사용자\\Desktop\\grpc_test` 경로에 압축 해제
 
-            ![Untitled](C:/Users/tritech-fall/Desktop/TIL/office/study/gRPC.assets/Untitled-1692581104783-4.png)
+            ![Untitled-1692581104783-4](gRPC.assets/Untitled-1692581104783-4.png)
 
     3. 시스템 환경 변수 설정
 
         1. PATH 등록
 
-            1. `C:\\Users\\tritech-fall\\Desktop\\grpc_test\\proto-23.4-win64\\bin` 경로 추가
+            1. `C:\\Users\\사용자\\Desktop\\grpc_test\\proto-23.4-win64\\bin` 경로 추가
 
-                ![Untitled](C:/Users/tritech-fall/Desktop/TIL/office/study/gRPC.assets/Untitled-1692581205706-6.png)
+                ![Untitled-1692581205706-6](gRPC.assets/Untitled-1692581205706-6.png)
 
 
 
