@@ -70,7 +70,7 @@ hdf5_file = h5py.File('test.hdf5', 'w')
 - 그룹에는 0개 이상의 개체가 포함되며 모든 개체는 적어도 하나의 그룹의 구성원
 - 항상 루트 그룹(`/`)이 존재하며, 파일 객체는 루트 그룹으로 취급할 수 있음
 
-![group1](HDF5.assets\group1.png)
+![group1](HDF5.assets/group1.png)
 
 - 예시
   
