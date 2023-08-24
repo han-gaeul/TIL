@@ -8,7 +8,7 @@
 - 다양한 데이터 타입을 제공하고 효율적인 파일 입출, 대용량의 복잡한 데이터를 저장하고 관리하기 위해 설계
 - 모든 object는 각자의 name이 있고, 계층적인 구조로 관리
 
-![img.jpg](HDF5.assets\img.jpg)
+![img.jpg](HDF5.assets/img.jpg)
 
 - 각 폴더는 Group, 파일의 역할을 하는 것은 Dataset
   - Dataset은 HDF5 파일에 담겨있는 데이터
